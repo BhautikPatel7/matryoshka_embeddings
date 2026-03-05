@@ -1,2 +1,6 @@
 kagglehub
 pandas
+sentence-transformers
+torch
+tqdm
+numpy

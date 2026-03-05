@@ -81,7 +81,7 @@ qa = questions.merge(
 
 preprocessor = DocumentProcessor(qa_df=qa, tag_df=tags)
 
-documents = preprocessor.process_all(max_docs=10)
+documents = preprocessor.process_all()
 
 preprocessor.get_statistics()
 

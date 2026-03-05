@@ -32,8 +32,8 @@ class DocumentProcessor:
     
     def get_tags_for_question(self, queastion_id):
         """Get all tags associated with a question"""
-
-        queastio_tag = self.tag_df[self.qa_df["Id"] == queastion_id]
+        # print(self.qa_df)
+        queastio_tag = self.tag_df[self.tag_df["Id"] == queastion_id]
         return list(queastio_tag["Tag"].values) if len(queastio_tag) > 0 else []
     
     def create_document(self, row):
@@ -85,7 +85,7 @@ class DocumentProcessor:
 
 
         for idx, row in df_to_process.iterrows():
-            try:
+            # try:
                 doc = self.create_document(row)
                 self.document.append(doc)
                 
@@ -93,9 +93,9 @@ class DocumentProcessor:
                 if (idx + 1) % 10000 == 0:
                     print(f"  Processed {idx + 1} documents...")
                     
-            except Exception as e:
-                print(f"  Error processing row {idx}: {e}")
-                continue
+            # except Exception as e:
+            #     print(f"  Error processing row {idx}: {e}")
+            #     continue
         
         print(f"✅ Created {len(self.document)} documents")
         return self.document
