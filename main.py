@@ -39,6 +39,8 @@ questions = pd.read_csv("data/Questions.csv", encoding="latin1", low_memory=Fals
 answers = pd.read_csv("data/Answers.csv", encoding="latin1", low_memory=False)
 tags = pd.read_csv("data/Tags.csv", encoding="latin1", low_memory=False)
 
+
+questions = questions.head(n=1000)
 # print(queastions.head())
 # print(answer.head())
 

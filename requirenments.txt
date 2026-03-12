@@ -4,3 +4,6 @@ sentence-transformers
 torch
 tqdm
 numpy
+seaborn
+matplotlib
+psutil
